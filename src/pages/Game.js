@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -10,9 +9,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 class Books extends Component {
   state = {
     books: [],
-    Pokemon: "",
-    author: "",
-    synopsis: ""
+    PokemonName: "",
   };
 
   componentDidMount() {
@@ -22,14 +19,8 @@ class Books extends Component {
   loadGame = () => {
     API.getBooks()
       .then(res =>
-        this.setState({ books: res.data, Pokemon: "", author: "", synopsis: "" })
+        this.setState({ books: res.data, PokemonName: "" })
       )
-      .catch(err => console.log(err));
-  };
-
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadGame())
       .catch(err => console.log(err));
   };
 
@@ -42,11 +33,9 @@ class Books extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.Pokemon && this.state.author) {
+    if (this.state.PokemonName) {
       API.saveBook({
-        Pokemon: this.state.Pokemon,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+        PokemonName: this.state.PokemonName
       })
         .then(res => this.loadGame())
         .catch(err => console.log(err));
@@ -66,31 +55,19 @@ class Books extends Component {
                 <div class="card">
                 <img src="img_avatar.png" alt="Avatar" style="width:100%">
                 <div class="container">
-                <h4><b>John Doe</b></h4> 
-                <p>Architect & Engineer</p> 
+                <h4><b></b></h4> 
+                <p></p> 
                 </div>
                 </div>
             <Input
 
-                value={this.state.Pokemon}
+                value={this.state.PokemonName}
                 onChange={this.handleInputChange}
-                name="Pokemon"
-                placeholder="Pokemon (required)"
-              />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="PokemonName"
+                placeholder="PokemonName (required)"
               />
               <FormBtn
-                disabled={!(this.state.author && this.state.Pokemon)}
+                disabled={!(this.state.PokemonName)}
                 onClick={this.handleFormSubmit}
               >
                 Submit Book
@@ -107,10 +84,9 @@ class Books extends Component {
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>
                       <strong>
-                        {book.Pokemon} by {book.author}
+                        {book.PokemonName} 
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
                   </ListItem>
                 ))}
               </List>
