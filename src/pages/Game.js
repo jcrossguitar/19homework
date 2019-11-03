@@ -92,5 +92,5 @@ class Books extends Component {
     );
   }
 }
-
+/></Col>
 export default Books;
