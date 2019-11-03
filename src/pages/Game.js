@@ -4,11 +4,10 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Books extends Component {
   state = {
-    books: [],
+    Pokemon: [],
     PokemonName: "",
   };
 
@@ -17,9 +16,9 @@ class Books extends Component {
   }
 
   loadGame = () => {
-    API.getBooks()
+    API.getPokemon()
       .then(res =>
-        this.setState({ books: res.data, PokemonName: "" })
+        this.setState({ Pokemon: res.data, PokemonName: "" })
       )
       .catch(err => console.log(err));
   };
@@ -66,7 +65,7 @@ class Books extends Component {
                 disabled={!(this.state.PokemonName)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Pokemon!
               </FormBtn>
           <Col size="md-6 sm-12">
             <Jumbotron>

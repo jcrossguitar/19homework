@@ -30,10 +30,6 @@ const PokemonSeed = [
     date: new Date(Date.now())
   },
   {
-    Pokemon: "Coraline",
-    date: new Date(Date.now())
-  },
-  {
     Pokemon: "Mew",
     date: new Date(Date.now())
   },
@@ -58,7 +54,7 @@ const PokemonSeed = [
     date: new Date(Date.now())
   },
   {
-    Pokemon: "Nidoran",
+    Pokemon: "Ditto",
     date: new Date(Date.now())
   },
   {
