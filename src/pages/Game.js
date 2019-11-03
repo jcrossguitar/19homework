@@ -50,17 +50,13 @@ class Books extends Component {
             <Jumbotron>
               <h1>Memory Game</h1>
             </Jumbotron>
-            <form>
-
                 <div class="card">
                 <img src="img_avatar.png" alt="Avatar" style="width:100%">
                 <div class="container">
                 <h4><b></b></h4> 
                 <p></p> 
                 </div>
-                </div>
             <Input
-
                 value={this.state.PokemonName}
                 onChange={this.handleInputChange}
                 name="PokemonName"
@@ -72,8 +68,6 @@ class Books extends Component {
               >
                 Submit Book
               </FormBtn>
-            </form>
-          </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Do not click on the same image twice!</h1>

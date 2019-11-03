@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/reactreadinglist"
 );
 
-const bookSeed = [
+const PokemonSeed = [
   {
     Pokemon: "Charmander",
     date: new Date(Date.now())
@@ -75,9 +75,9 @@ const bookSeed = [
   }
 ];
 
-db.Book
+db.PokemonDB
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.PokemonDB.collection.insertMany(PokemonSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
