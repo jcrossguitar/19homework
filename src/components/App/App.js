@@ -1,6 +1,5 @@
 // IMPORTS
 import React, { Component } from 'react';
-import Sound from 'react-sound';
 import './App.css';
 import Header from '../Header/Header.js';
 import Alerts from '../Alerts/Alerts.js';
@@ -9,7 +8,6 @@ import Main from '../Main/Main.js';
 import Footer from '../Footer/Footer.js';
 import Card from '../Card/Card.js';
 import cards from '../../assets/json/cards.json';
-import theme from '../../assets/sounds/theme.mp3';
 // CLASS: App
 class App extends Component{
 // STATE    
@@ -18,15 +16,11 @@ class App extends Component{
         score: 0,
         topScore: 0,
         selected: [],
-        soundURL: theme,
-        soundPosition: 0,
-        soundStatus: Sound.status.PLAYING,
         shake: "",
         message1: "Select an image to begin!",
         message2: "",
         alertType: "info",
         topScoreType: "info",
-        volume: "on"
     };
 // ON CLICK: SHUFFLE CARDS
     shuffle = id => {
