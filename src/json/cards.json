@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "count": 0,
+          "name": "Bulbasaur",
+      "image": "./images/bulbasaur.jpg"
+    },
+  
+    {
+      "id": 2,
+      "count": 0,
+          "name": "Squirtle",
+      "image": "./images/squirtle.jpg"
+    },
+    {
+      "id": 3,
+      "count": 0,
+          "name": "Ninetails",
+      "image": "./images/ninetails.jpg"
+    },
+    {
+      "id": 4,
+      "count": 0,
+          "name": "Charmander",
+      "image": "./images/charmander.jpg"
+    },
+    {
+      "id": 5,
+      "count": 0,
+          "name": "Dratini",
+      "image": "./images/dratini.jpg"
+    },
+    {
+      "id": 6,
+      "count": 0,
+          "name": "Gengar",
+      "image": "./images/gengar.jpg"
+    },
+    {
+      "id": 7,
+      "count": 0,
+          "name": "Growlithe",
+      "image": "./images/growlithe.jpg"
+    },
+    {
+      "id": 8,
+      "count": 0,
+          "name": "Haunter",
+      "image": "./images/haunter.jpg"
+    },
+    {
+      "id": 9,
+      "count": 0,
+          "name": "Pikachu",
+      "image": "./images/pikachu.jpg"
+    },
+    {
+      "id": 10,
+      "count": 0,
+          "name": "Mew",
+      "image": "./images/mew.jpg"
+    },
+    {
+      "id": 11,
+      "count": 0,
+          "name": "Scyther",
+      "image": "./images/scyther.jpg"
+    },
+    {
+      "id": 12,
+      "count": 0,
+          "name": "Rapidash",
+      "image": "./images/rapidash.jpg"
+    }
+  ] 
