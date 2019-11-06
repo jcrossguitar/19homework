@@ -1,15 +1,21 @@
 {
-  "name": "19homeworkapp",
+  "name": "19homework",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "dotenv": "^8.2.0",
     "mongoose": "^5.7.7",
     "react": "^16.11.0",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "reactstrap": "^8.1.1",
+    "webpack-dev-server": ">=3.1.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -29,5 +35,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://jcrossguitar.github.io/19homework/"
 }
